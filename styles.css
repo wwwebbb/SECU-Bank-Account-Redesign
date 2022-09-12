@@ -1,0 +1,16 @@
+header {
+  background: #305e80;
+}
+
+header .container {
+  padding: 0.7em 0;
+}
+
+.nav-link {
+  margin: 0 4px;
+  color: #ffffff;
+}
+
+.nav-link:hover {
+  color: #d9e0e8;
+}
