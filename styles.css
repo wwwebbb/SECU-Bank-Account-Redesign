@@ -1,9 +1,17 @@
+/* increases Bootstrap width */
+@media (min-width: 576px) {
+  .container {
+    max-width: 1250px;
+  }
+}
+
+/* Header */
 header {
   background: #305e80;
 }
 
-header .container {
-  padding: 0.7em 0;
+.container {
+  padding: 0.83rem 0;
 }
 
 .nav-link {
@@ -13,4 +21,65 @@ header .container {
 
 .nav-link:hover {
   color: #d9e0e8;
+}
+
+/* Bank account section */
+#accts-section {
+  background: #d9e0e8;
+  height: auto;
+}
+
+#accts-section .container {
+  padding: 10px 0.83rem;
+}
+
+h5 {
+  color: #355c7b;
+}
+
+h5 span {
+  position: absolute;
+  max-width: 0 auto 0 0;
+  color: red;
+}
+
+h4,
+.acct-num-rate {
+  margin: 0.3rem 0.8rem 0.2rem;
+}
+
+.acct-block {
+  transition: 0.1s;
+  position: relative;
+  height: 7rem;
+  width: auto;
+  margin: 10px auto;
+  border: 1px solid #d1d6da;
+  border-left: 10px solid;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.acct-block:hover {
+  transition: 0.1s;
+  cursor: pointer;
+  border-left: 7px solid currentColor;
+  filter: drop-shadow(0 0 0.2rem #92a6bd);
+}
+
+.acct-num-rate {
+  color: #747474;
+}
+
+.acct-amt {
+  position: absolute;
+  bottom: 0.7rem;
+  right: 1.2rem;
+  font-size: large;
+  font-weight: 600;
+}
+
+.sup {
+  font-size: medium;
+  vertical-align: 10%;
 }
