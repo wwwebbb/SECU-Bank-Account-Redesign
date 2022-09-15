@@ -5,7 +5,7 @@
   }
 }
 
-/* Header */
+/* HEADING SECTION */
 header {
   background: #305e80;
 }
@@ -23,27 +23,36 @@ header {
   color: #d9e0e8;
 }
 
-/* Bank account section */
+/* BANK ACCOUNTS SECTION*/
 #accts-section {
   background: #d9e0e8;
   height: auto;
 }
 
 #accts-section .container {
-  padding: 10px 0.83rem;
+  padding: 20px 0.83rem 10px;
 }
 
+/* account headers */
 h5 {
   color: #355c7b;
+  font-weight: 400;
 }
 
-h5 span {
-  position: absolute;
-  max-width: 0 auto 0 0;
-  color: red;
+#accts-total {
+  font-weight: 600;
 }
 
-h4,
+.flex-container {
+  display: flex;
+}
+.flex-child {
+  flex: 1;
+}
+
+h4 {
+  margin: 0.6rem 0.8rem 0.2rem;
+}
 .acct-num-rate {
   margin: 0.3rem 0.8rem 0.2rem;
 }
@@ -53,7 +62,7 @@ h4,
   position: relative;
   height: 7rem;
   width: auto;
-  margin: 10px auto;
+  margin: 5px auto;
   border: 1px solid #d1d6da;
   border-left: 10px solid;
   border-radius: 10px;
@@ -64,6 +73,7 @@ h4,
   transition: 0.1s;
   cursor: pointer;
   border-left: 7px solid currentColor;
+  background: #f8fafa;
   filter: drop-shadow(0 0 0.2rem #92a6bd);
 }
 
@@ -79,7 +89,14 @@ h4,
   font-weight: 600;
 }
 
+/* stylized superscript */
 .sup {
   font-size: medium;
   vertical-align: 10%;
+}
+
+/* FOOTER SECTION */
+footer {
+  background: #f5f9fc;
+  height: 100px;
 }

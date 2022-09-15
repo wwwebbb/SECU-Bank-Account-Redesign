@@ -23,6 +23,7 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -88,23 +89,71 @@
     <!-- Accounts Section -->
     <section id="accts-section">
       <div class="container">
-        <h5>
-          <i class="fa-solid fa-money-bills fa-xs" style="color: #407a0b"></i>
-          Deposit Accounts
-          <span>asdsda</span>
-        </h5>
+        <div class="flex-container">
+          <h5 class="flex-child">
+            <i class="fa-solid fa-money-bills fa-xs" style="color: #407a0b"></i>
+            DEPOSIT ACCOUNTS
+          </h5>
+          <h5 id="accts-total" class="justify-content-end">
+            $ 200.<span class="sup">00</span>
+          </h5>
+        </div>
+
         <div class="acct-block" style="border-left-color: #407a0b">
-          <h4>Checking</h4>
+          <h4>Checking 1</h4>
           <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
           <div class="acct-amt">$ 100.<span class="sup">00</span></div>
         </div>
         <div class="acct-block" style="border-left-color: #407a0b">
-          <h4>Checking</h4>
+          <h4>Checking 2</h4>
           <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
           <div class="acct-amt">$ 100.<span class="sup">00</span></div>
         </div>
       </div>
+
+      <div class="container">
+        <div class="flex-container">
+          <h5 class="flex-child">
+            <i class="fa-solid fa-piggy-bank" style="color: #a40a6e"></i>
+            SAVINGS
+          </h5>
+          <h5 id="accts-total" class="justify-content-end">
+            $ 200.<span class="sup">00</span>
+          </h5>
+        </div>
+
+        <div class="acct-block" style="border-left-color: #a40a6e">
+          <h4>Savings 1</h4>
+          <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
+          <div class="acct-amt">$ 100.<span class="sup">00</span></div>
+        </div>
+        <div class="acct-block" style="border-left-color: #a40a6e">
+          <h4>Savings 2</h4>
+          <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
+          <div class="acct-amt">$ 100.<span class="sup">00</span></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="flex-container">
+          <h5 class="flex-child">
+            <i class="fa-solid fa-credit-card" style="color: #e79712"></i>
+            CREDIT CARDS
+          </h5>
+          <h5 id="accts-total" class="justify-content-end">
+            $ 200.<span class="sup">00</span>
+          </h5>
+        </div>
+
+        <div class="acct-block" style="border-left-color: #e79712">
+          <h4>Credit Card</h4>
+          <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
+          <div class="acct-amt">$ 0.<span class="sup">00</span></div>
+        </div>
+      </div>
     </section>
+
+    <footer></footer>
 
     <!-- Bootstrap Scripts -->
     <script
