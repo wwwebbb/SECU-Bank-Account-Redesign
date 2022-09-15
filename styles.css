@@ -5,9 +5,22 @@
   }
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
 /* HEADING SECTION */
 header {
   background: #305e80;
+  flex: 0 1 auto;
 }
 
 .container {
@@ -26,7 +39,7 @@ header {
 /* BANK ACCOUNTS SECTION*/
 #accts-section {
   background: #d9e0e8;
-  height: auto;
+  flex: 1 1 auto;
 }
 
 #accts-section .container {
@@ -89,7 +102,7 @@ h4 {
   font-weight: 600;
 }
 
-/* stylized superscript */
+/* stylized superscript for acct cents*/
 .sup {
   font-size: medium;
   vertical-align: 10%;
@@ -98,5 +111,26 @@ h4 {
 /* FOOTER SECTION */
 footer {
   background: #f5f9fc;
-  height: 100px;
+  text-align: center;
+  flex: 0 1 auto;
+}
+
+footer .container {
+  font-size: 90%;
+  padding: 10px 1rem 10px;
+}
+
+.col-sm-auto {
+  margin: 0.3rem 0.6rem;
+}
+
+.secu-eng-footer {
+  margin: 5px 6rem;
+}
+
+a {
+  color: #406f95;
+}
+a:hover {
+  color: currentColor;
 }

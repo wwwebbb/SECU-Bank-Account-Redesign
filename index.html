@@ -25,133 +25,187 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Header Section -->
-    <header>
-      <div class="container">
-        <nav class="navbar navbar-expand-lg mr-auto">
-          <!-- an anchor tag on the logo image messed up the page flow, so an input tag w/ JS click function was used instead -->
-          <input
-            type="image"
-            src="images/state-employees-credit-union-logo@2x.png"
-            alt="SECU Logo"
-            title="SECU Home Webpage"
-            style="width: 25%"
-            id="logo"
-          />
+    <div class="box">
+      <header>
+        <div class="container">
+          <nav class="navbar navbar-expand-lg mr-auto">
+            <!-- an anchor tag on the logo image messed up the page flow, so an input tag w/ JS click function was used instead -->
+            <input
+              type="image"
+              src="images/state-employees-credit-union-logo@2x.png"
+              alt="State Employees' Credit Union"
+              title="SECU Home Webpage"
+              style="width: 25%"
+              id="logo"
+            />
 
-          <button
-            class="navbar-toggler navbar-dark"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <button
+              class="navbar-toggler navbar-dark"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="ml-auto">
-              <ul class="navbar-nav">
-                <li class="nav-item ml-auto">
-                  <a class="nav-link active" href="#">Rates & Fees</a>
-                </li>
-                <li class="nav-item ml-auto">
-                  <a class="nav-link" href="#">Locater</a>
-                </li>
-                <li class="nav-item ml-auto">
-                  <a class="nav-link" href="#">Site Map</a>
-                </li>
-                <li class="nav-item ml-auto">
-                  <a class="nav-link" href="#">Help</a>
-                </li>
-                <li class="nav-item ml-auto">
-                  <a class="nav-link" href="#">Contact Us</a>
-                </li>
-                <li class="nav-item ml-auto">
-                  <a class="nav-link" href="#"
-                    ><i
-                      title="Sign Out"
-                      class="fa-sharp fa-solid fa-right-from-bracket"
-                    ></i
-                  ></a>
-                </li>
-              </ul>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="ml-auto">
+                <ul class="navbar-nav">
+                  <li class="nav-item d-flex justify-content-center">
+                    <a class="nav-link" href="">Rates & Fees</a>
+                  </li>
+                  <li class="nav-item d-flex justify-content-center">
+                    <a class="nav-link" href="">Locater</a>
+                  </li>
+                  <li class="nav-item d-flex justify-content-center">
+                    <a class="nav-link" href="">Site Map</a>
+                  </li>
+                  <li class="nav-item d-flex justify-content-center">
+                    <a class="nav-link" href="">Help</a>
+                  </li>
+                  <li class="nav-item d-flex justify-content-center">
+                    <a class="nav-link" href="">Contact Us</a>
+                  </li>
+                  <li class="nav-item d-flex justify-content-center">
+                    <a class="nav-link" href=""
+                      ><i
+                        title="Sign Out"
+                        class="fa-sharp fa-solid fa-right-from-bracket"
+                      ></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Accounts Section -->
+      <section id="accts-section">
+        <div class="container">
+          <div class="flex-container">
+            <h5 class="flex-child">
+              <i
+                class="fa-solid fa-money-bills fa-xs"
+                style="color: #407a0b"
+              ></i>
+              DEPOSIT ACCOUNTS
+            </h5>
+            <h5 id="accts-total" class="justify-content-end">
+              $ 200.<span class="sup">00</span>
+            </h5>
+          </div>
+
+          <div class="acct-block" style="border-left-color: #407a0b">
+            <h4>Checking 1</h4>
+            <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
+            <div class="acct-amt">$ 100.<span class="sup">00</span></div>
+          </div>
+          <div class="acct-block" style="border-left-color: #407a0b">
+            <h4>Checking 2</h4>
+            <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
+            <div class="acct-amt">$ 100.<span class="sup">00</span></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="flex-container">
+            <h5 class="flex-child">
+              <i
+                class="fa-solid fa-piggy-bank fa-xs"
+                style="color: #a40a6e"
+              ></i>
+              SAVINGS
+            </h5>
+            <h5 id="accts-total" class="justify-content-end">
+              $ 200.<span class="sup">00</span>
+            </h5>
+          </div>
+
+          <div class="acct-block" style="border-left-color: #a40a6e">
+            <h4>Savings 1</h4>
+            <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
+            <div class="acct-amt">$ 100.<span class="sup">00</span></div>
+          </div>
+          <div class="acct-block" style="border-left-color: #a40a6e">
+            <h4>Savings 2</h4>
+            <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
+            <div class="acct-amt">$ 100.<span class="sup">00</span></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="flex-container">
+            <h5 class="flex-child">
+              <i
+                class="fa-solid fa-credit-card fa-xs"
+                style="color: #e79712"
+              ></i>
+              CREDIT CARDS
+            </h5>
+            <h5 id="accts-total" class="justify-content-end">
+              $ 0.<span class="sup">00</span>
+            </h5>
+          </div>
+
+          <div class="acct-block" style="border-left-color: #e79712">
+            <h4>Credit Card 1</h4>
+            <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
+            <div class="acct-amt">$ 0.<span class="sup">00</span></div>
+          </div>
+          <div class="acct-block" style="border-left-color: #e79712">
+            <h4>Credit Card 2</h4>
+            <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
+            <div class="acct-amt">$ 0.<span class="sup">00</span></div>
+          </div>
+          <div>
+            <em>Your <a href="">FICO® SCORE</a> as of 1/11/1111.</em>
+            <div style="font-size: 70%">
+              *FICO is a registered trademark of Fair Isaac Corporation in the
+              United States and other countries.
             </div>
           </div>
-        </nav>
-      </div>
-    </header>
+        </div>
+      </section>
 
-    <!-- Accounts Section -->
-    <section id="accts-section">
-      <div class="container">
-        <div class="flex-container">
-          <h5 class="flex-child">
-            <i class="fa-solid fa-money-bills fa-xs" style="color: #407a0b"></i>
-            DEPOSIT ACCOUNTS
-          </h5>
-          <h5 id="accts-total" class="justify-content-end">
-            $ 200.<span class="sup">00</span>
-          </h5>
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="container">
+          <div class="row justify-content-sm-center" style="font-weight: 600">
+            <div class="col-sm-auto">
+              <a href="">Download Acrobat Reader</a>
+            </div>
+            <div class="col-sm-auto"><a href="">Accessibility</a></div>
+            <div class="col-sm-auto"><a href="">Privacy Notice</a></div>
+            <div class="col-sm-auto"><a href="">Legal</a></div>
+            <div class="col-sm-auto"><a href="">HMDA</a></div>
+            <div class="col-sm-auto"><a href="">Equal Housing Lender</a></div>
+            <div class="col-sm-auto"><a href="">NMLS# 430055</a></div>
+            <div class="col-sm-auto">
+              <a href="">Federally Insured by NCUA</a>
+            </div>
+          </div>
+          <div style="font-size: 80%">
+            <div class="secu-eng-footer">
+              State Employees' Credit Union conducts all member business in
+              English. All origination, servicing, collection, marketing, and
+              informational materials are provided in English only. As a service
+              to our members, we will attempt to assist those who have limited
+              English proficiency where possible.
+            </div>
+            <div>
+              <a target="_blank" href="https://github.com/wwwebbb"
+                >© 2022 Miles Webb</a
+              >
+            </div>
+          </div>
         </div>
-
-        <div class="acct-block" style="border-left-color: #407a0b">
-          <h4>Checking 1</h4>
-          <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
-          <div class="acct-amt">$ 100.<span class="sup">00</span></div>
-        </div>
-        <div class="acct-block" style="border-left-color: #407a0b">
-          <h4>Checking 2</h4>
-          <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
-          <div class="acct-amt">$ 100.<span class="sup">00</span></div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="flex-container">
-          <h5 class="flex-child">
-            <i class="fa-solid fa-piggy-bank" style="color: #a40a6e"></i>
-            SAVINGS
-          </h5>
-          <h5 id="accts-total" class="justify-content-end">
-            $ 200.<span class="sup">00</span>
-          </h5>
-        </div>
-
-        <div class="acct-block" style="border-left-color: #a40a6e">
-          <h4>Savings 1</h4>
-          <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
-          <div class="acct-amt">$ 100.<span class="sup">00</span></div>
-        </div>
-        <div class="acct-block" style="border-left-color: #a40a6e">
-          <h4>Savings 2</h4>
-          <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
-          <div class="acct-amt">$ 100.<span class="sup">00</span></div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="flex-container">
-          <h5 class="flex-child">
-            <i class="fa-solid fa-credit-card" style="color: #e79712"></i>
-            CREDIT CARDS
-          </h5>
-          <h5 id="accts-total" class="justify-content-end">
-            $ 200.<span class="sup">00</span>
-          </h5>
-        </div>
-
-        <div class="acct-block" style="border-left-color: #e79712">
-          <h4>Credit Card</h4>
-          <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
-          <div class="acct-amt">$ 0.<span class="sup">00</span></div>
-        </div>
-      </div>
-    </section>
-
-    <footer>aasdds</footer>
+      </footer>
+    </div>
 
     <!-- Bootstrap Scripts -->
     <script
