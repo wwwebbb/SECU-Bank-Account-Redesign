@@ -25,7 +25,10 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- 'box' class parent div locks the footer to the bottom of page and .accts-section will fill empty space to footer 
+      regardless of the number of accounts listed or if the user is viewing on a large screen -->
     <div class="box">
+      <!-- HEADER -->
       <header>
         <div class="container">
           <nav class="navbar navbar-expand-lg mr-auto">
@@ -69,6 +72,13 @@
                   <li class="nav-item d-flex justify-content-center">
                     <a class="nav-link" href="">Contact Us</a>
                   </li>
+                  <li
+                    id="theme-toggle"
+                    class="nav-item nav-link d-flex justify-content-center"
+                    style="cursor: pointer"
+                  >
+                    <i class="fa-solid fa-moon" style="margin: auto 0"></i>
+                  </li>
                   <li class="nav-item d-flex justify-content-center">
                     <a class="nav-link" href=""
                       ><i
@@ -84,8 +94,18 @@
         </div>
       </header>
 
-      <!-- Accounts Section -->
+      <!-- ACCOUNTS SECTION -->
       <section id="accts-section">
+        <!-- Total Balance -->
+        <div class="container" style="margin-bottom: -20px">
+          <h5 id="total-balance" style="text-align: right">
+            TOTAL BALANCE: $ 400.<span class="sup">00</span>
+          </h5>
+
+          <hr style="margin-right: 0" />
+        </div>
+
+        <!-- Deposit Accounts -->
         <div class="container">
           <div class="flex-container">
             <h5 class="flex-child">
@@ -100,18 +120,25 @@
             </h5>
           </div>
 
-          <div class="acct-block" style="border-left-color: #407a0b">
+          <div
+            class="acct-block acct-block-theme-toggle"
+            style="border-left-color: #407a0b"
+          >
             <h4>Checking 1</h4>
             <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
             <div class="acct-amt">$ 100.<span class="sup">00</span></div>
           </div>
-          <div class="acct-block" style="border-left-color: #407a0b">
+          <div
+            class="acct-block acct-block-theme-toggle"
+            style="border-left-color: #407a0b"
+          >
             <h4>Checking 2</h4>
             <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
             <div class="acct-amt">$ 100.<span class="sup">00</span></div>
           </div>
         </div>
 
+        <!-- Savings Accounts -->
         <div class="container">
           <div class="flex-container">
             <h5 class="flex-child">
@@ -126,18 +153,25 @@
             </h5>
           </div>
 
-          <div class="acct-block" style="border-left-color: #a40a6e">
+          <div
+            class="acct-block acct-block-theme-toggle"
+            style="border-left-color: #a40a6e"
+          >
             <h4>Savings 1</h4>
             <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
             <div class="acct-amt">$ 100.<span class="sup">00</span></div>
           </div>
-          <div class="acct-block" style="border-left-color: #a40a6e">
+          <div
+            class="acct-block acct-block-theme-toggle"
+            style="border-left-color: #a40a6e"
+          >
             <h4>Savings 2</h4>
             <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
             <div class="acct-amt">$ 100.<span class="sup">00</span></div>
           </div>
         </div>
 
+        <!-- Credit Card Accounts -->
         <div class="container">
           <div class="flex-container">
             <h5 class="flex-child">
@@ -152,17 +186,26 @@
             </h5>
           </div>
 
-          <div class="acct-block" style="border-left-color: #e79712">
+          <div
+            class="acct-block acct-block-theme-toggle"
+            style="border-left-color: #e79712"
+          >
             <h4>Credit Card 1</h4>
             <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
             <div class="acct-amt">$ 0.<span class="sup">00</span></div>
           </div>
-          <div class="acct-block" style="border-left-color: #e79712">
+          <div
+            class="acct-block acct-block-theme-toggle"
+            style="border-left-color: #e79712"
+          >
             <h4>Credit Card 2</h4>
             <div class="acct-num-rate">....6789 • Rate: 0.01%</div>
             <div class="acct-amt">$ 0.<span class="sup">00</span></div>
           </div>
-          <div>
+
+          <hr style="width: 50%; margin-left: 0" />
+
+          <div class="fico">
             <em>Your <a href="">FICO® SCORE</a> as of 1/11/1111.</em>
             <div style="font-size: 70%">
               *FICO is a registered trademark of Fair Isaac Corporation in the
@@ -172,8 +215,8 @@
         </div>
       </section>
 
-      <!-- Footer -->
-      <footer id="footer">
+      <!-- FOOTER -->
+      <footer>
         <div class="container">
           <div class="row justify-content-sm-center" style="font-weight: 600">
             <div class="col-sm-auto">

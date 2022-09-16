@@ -17,7 +17,7 @@ body {
   height: 100%;
 }
 
-/* HEADING SECTION */
+/* --------------- HEADER SECTION ---------------*/
 header {
   background: #305e80;
   flex: 0 1 auto;
@@ -36,7 +36,7 @@ header {
   color: #d9e0e8;
 }
 
-/* BANK ACCOUNTS SECTION*/
+/* --------------- BANK ACCOUNTS SECTION ---------------*/
 #accts-section {
   background: #d9e0e8;
   flex: 1 1 auto;
@@ -46,7 +46,7 @@ header {
   padding: 20px 0.83rem 10px;
 }
 
-/* account headers */
+/* account h5 stying */
 h5 {
   color: #355c7b;
   font-weight: 400;
@@ -65,29 +65,10 @@ h5 {
 
 h4 {
   margin: 0.6rem 0.8rem 0.2rem;
+  color: #212529;
 }
 .acct-num-rate {
   margin: 0.3rem 0.8rem 0.2rem;
-}
-
-.acct-block {
-  transition: 0.1s;
-  position: relative;
-  height: 7rem;
-  width: auto;
-  margin: 5px auto;
-  border: 1px solid #d1d6da;
-  border-left: 10px solid;
-  border-radius: 10px;
-  background: #ffffff;
-}
-
-.acct-block:hover {
-  transition: 0.1s;
-  cursor: pointer;
-  border-left: 7px solid currentColor;
-  background: #f8fafa;
-  filter: drop-shadow(0 0 0.2rem #92a6bd);
 }
 
 .acct-num-rate {
@@ -108,7 +89,31 @@ h4 {
   vertical-align: 10%;
 }
 
-/* FOOTER SECTION */
+.acct-block {
+  transition: 0.1s;
+  position: relative;
+  height: 7rem;
+  width: auto;
+  margin: 5px auto;
+  border: 1px solid #d1d6da;
+  border-left: 10px solid;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.acct-block:hover {
+  transition: 0.1s;
+  cursor: pointer;
+  border-left: 7px solid currentColor;
+  background-color: #f8fafa;
+}
+
+/* drop shadow toggle */
+.acct-block-theme-toggle:hover {
+  filter: drop-shadow(0 0 0.2rem #92a6bd);
+}
+
+/* --------------- FOOTER SECTION ---------------*/
 footer {
   background: #f5f9fc;
   text-align: center;
