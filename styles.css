@@ -60,6 +60,16 @@ header .nav-link:hover {
   background: #565656 !important;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 50%;
+  }
+}
+
+.unread-message {
+  animation: fadeIn 1s infinite alternate;
+}
+
 /* --------------- BANK ACCOUNTS SECTION ---------------*/
 #accts-section {
   transition: 0.1s;
