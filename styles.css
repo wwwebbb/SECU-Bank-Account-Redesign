@@ -39,11 +39,23 @@ header .nav-link:hover {
 /* --------------- NAVBAR ---------------*/
 #navbar,
 #navbar .nav-link {
-  transition: 0.1s !important;
+  transition: 0.1s;
 }
-#navbar {
-  padding: auto 0.83rem;
+
+/* horizontal scroll */
+#navbar .navbar-scroll {
+  overflow: auto;
+  white-space: nowrap;
+  /* centers hor-scroll elements & prevents an element's top border from not showing on hover while a dropdown link is active*/
+  margin: 1px auto 0;
 }
+
+/* prevents vertical scroll from showing */
+#navbar .navbar-scroll li {
+  margin: auto 0;
+}
+
+/* toggled with JS */
 .dropdown-item-bg-override:hover {
   background: #565656 !important;
 }

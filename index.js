@@ -12,14 +12,18 @@ $("#theme-toggle").click(function () {
   // toggles dark theme when .fa-moon is active
   if ($("i", this).hasClass("fa-moon")) {
     $("i", this)
-      .removeClass("fa-moon")
-      .addClass("fa-sun")
+      .toggleClass("fa-moon fa-sun")
       .css("margin", "auto 0 auto -4px");
 
     //navbar
-    $("#navbar, .dropdown-menu").css({ background: "#2C2C2C" });
-    $(".dropdown-item, .dropdown").addClass("dropdown-item-bg-override");
-    //(line below needed for selecting an unselected dropdown)
+    $("#navbar, .dropdown-menu").css({
+      background: "#2C2C2C",
+    });
+    $(".dropdown-menu").css({
+      border: "1px solid #fff",
+    });
+    $(".dropdown-item, .dropdown").toggleClass("dropdown-item-bg-override");
+    //(line below needed for both active and inactive dropdown)
     $(".nav-link, .active", "#navbar").css({
       background: "#2C2C2C",
     });
@@ -34,7 +38,7 @@ $("#theme-toggle").click(function () {
         "border-right": "1px solid black",
         "border-bottom": "1px solid black",
       })
-      .removeClass("acct-block-theme-toggle");
+      .toggleClass("acct-block-theme-toggle");
     $("h5, h4").css("color", "#DEDEDE");
     $(".acct-amt, .fico").css("color", "#929292");
 
@@ -44,14 +48,14 @@ $("#theme-toggle").click(function () {
 
     // toggles light theme when .fa-sun is active
   } else {
-    $("i", this)
-      .removeClass("fa-sun")
-      .addClass("fa-moon")
-      .css("margin", "auto 0");
+    $("i", this).toggleClass("fa-moon fa-sun").css("margin", "auto 0");
 
     //navbar
     $("#navbar").css({ background: "#FFF" });
-    $(".dropdown-item, .dropdown").removeClass("dropdown-item-bg-override");
+    $(".dropdown-menu").css({
+      border: "1px solid #DEE2E6",
+    });
+    $(".dropdown-item, .dropdown").toggleClass("dropdown-item-bg-override");
     $(".nav-link, .dropdown-menu, .active", "#navbar").css({
       background: "#fff",
     });
@@ -61,12 +65,12 @@ $("#theme-toggle").click(function () {
     $("#accts-section").css("background", "#d9e0e8");
     $(".acct-block")
       .css({
-        "background-color": "#ffffff",
+        "background-color": "#fff",
         "border-top": "1px solid #d1d6da",
         "border-right": "1px solid #d1d6da",
         "border-bottom": "1px solid #d1d6da",
       })
-      .addClass("acct-block-theme-toggle");
+      .toggleClass("acct-block-theme-toggle");
     $("h5, h4").css("color", "#355c7b");
     $(".acct-amt, .fico").css("color", "black");
 
