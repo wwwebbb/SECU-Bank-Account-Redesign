@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- 'box' class parent div locks the footer to the bottom of page and .accts-section will fill empty space to footer 
+    <!-- .box parent div locks the footer to the bottom of page and .accts-section will fill empty space to footer 
       regardless of the number of accounts listed or if the user is viewing on a large screen -->
     <div class="box">
       <!-- HEADER -->
@@ -75,13 +75,15 @@
                   <li
                     id="theme-toggle"
                     class="nav-item nav-link d-flex justify-content-center"
-                    style="cursor: pointer"
+                    style="cursor: pointer; margin: auto 4px"
                   >
-                    <i class="fa-solid fa-moon" style="margin: auto 0"></i>
+                    <i class="fa-solid fa-moon"></i>
                   </li>
-                  <li class="nav-item d-flex justify-content-center">
-                    <a class="nav-link" href=""
-                      ><i
+                  <li
+                    id="sign-out"
+                    class="nav-item nav-link d-flex justify-content-center" 
+                    style="cursor: pointer; margin: auto 4px"
+                  ><i
                         title="Sign Out"
                         class="fa-sharp fa-solid fa-right-from-bracket"
                       ></i
@@ -94,6 +96,54 @@
         </div>
       </header>
 
+      <!-- NAVBAR -->
+    <div id="navbar">
+      <div class="container">
+        <ul class="nav nav-tabs nav-fill" >
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Accounts</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Summary</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Open an Account</a>
+              <a class="dropdown-item" href="#">Download Accounts</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Move Money</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Transfer Funds</a>
+              <a class="dropdown-item" href="#">Loan Advances</a>
+              <a class="dropdown-item" href="#">Credit Card Cash Advance</a>
+              <a class="dropdown-item" href="#">Recurring Transfer</a>
+              <a class="dropdown-item" href="#">Wire Transfer</a>
+              <a class="dropdown-item" href="#">Withdraw Funds</a>
+            </div>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#">BillPay</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Loan Center</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Message Center</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Alerts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Two-Way Text Messaging</a>
+          </li>
+        </ul>
+      </div> 
+    </div>
+
       <!-- ACCOUNTS SECTION -->
       <section id="accts-section">
         <!-- Total Balance -->
@@ -102,7 +152,7 @@
             TOTAL BALANCE: $ 400.<span class="sup">00</span>
           </h5>
 
-          <hr style="margin-right: 0" />
+          <hr />
         </div>
 
         <!-- Deposit Accounts -->
@@ -203,7 +253,7 @@
             <div class="acct-amt">$ 0.<span class="sup">00</span></div>
           </div>
 
-          <hr style="width: 50%; margin-left: 0" />
+          <hr />
 
           <div class="fico">
             <em>Your <a href="">FICO® SCORE</a> as of 1/11/1111.</em>
