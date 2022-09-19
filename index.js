@@ -44,7 +44,7 @@ $("#theme-toggle").click(function () {
 
     //footer
     $("footer").css({ background: "#2C2C2C", color: "#fff" });
-    $("a", "footer").css("color", "#6797be");
+    $("a", "footer, #accts-section").css("color", "#6797be");
 
     // toggles light theme when .fa-sun is active
   } else {
@@ -76,6 +76,6 @@ $("#theme-toggle").click(function () {
 
     //footer
     $("footer").css({ background: "#f5f9fc", color: "black" });
-    $("a", "footer").css("color", " #406f95");
+    $("a", "footer, #accts-section").css("color", " #406f95");
   }
 });
