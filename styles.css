@@ -46,7 +46,9 @@ header .nav-link:hover {
 #navbar .navbar-scroll {
   overflow: auto;
   white-space: nowrap;
-  /* centers hor-scroll elements & prevents an element's top border from not showing on hover while a dropdown link is active*/
+  /* the margin centers hor-scroll elements & prevents 
+  an element's top border from not showing on hover while 
+  a dropdown link is active*/
   margin: 1px auto 0;
 }
 
@@ -81,14 +83,19 @@ header .nav-link:hover {
   padding: 20px 0.83rem 10px;
 }
 
+#accts-total {
+  font-weight: 600;
+}
+
 /* account h5 stying */
 h5 {
   color: #355c7b;
   font-weight: 400;
 }
 
-#accts-total {
-  font-weight: 600;
+h4 {
+  color: #212529;
+  margin: 0.6rem 0.8rem 0.2rem;
 }
 
 .flex-container {
@@ -98,15 +105,8 @@ h5 {
   flex: 1;
 }
 
-h4 {
-  margin: 0.6rem 0.8rem 0.2rem;
-  color: #212529;
-}
 .acct-num-rate {
   margin: 0.3rem 0.8rem 0.2rem;
-}
-
-.acct-num-rate {
   color: #747474;
 }
 

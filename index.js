@@ -39,12 +39,13 @@ $("#theme-toggle").click(function () {
         "border-bottom": "1px solid black",
       })
       .toggleClass("acct-block-theme-toggle");
+    //h4 & h5 both become the same color in dark mode
     $("h5, h4").css("color", "#DEDEDE");
     $(".acct-amt, .fico").css("color", "#929292");
 
-    //footer
+    //footer & fico score
     $("footer").css({ background: "#2C2C2C", color: "#fff" });
-    $("a", "footer, #accts-section").css("color", "#6797be");
+    $("a", "footer fico-score").css("color", "#6797be");
 
     // toggles light theme when .fa-sun is active
   } else {
@@ -71,11 +72,12 @@ $("#theme-toggle").click(function () {
         "border-bottom": "1px solid #d1d6da",
       })
       .toggleClass("acct-block-theme-toggle");
-    $("h5, h4").css("color", "#355c7b");
+    $("h4").css("color", "#212529");
+    $("h5").css("color", "#355c7b");
     $(".acct-amt, .fico").css("color", "black");
 
-    //footer
+    //footer & fico score
     $("footer").css({ background: "#f5f9fc", color: "black" });
-    $("a", "footer, #accts-section").css("color", " #406f95");
+    $("a", "footer .fico-score").css("color", " #406f95");
   }
 });
