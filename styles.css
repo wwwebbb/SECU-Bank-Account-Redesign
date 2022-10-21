@@ -5,16 +5,75 @@
   }
 }
 
+/* body locks the footer to the bottom of page and .accts-section flex will fill empty space to footer flex
+regardless of the number of accounts listed or if the user is viewing on a large screen */
 html,
 body {
   height: 100%;
   margin: 0;
-}
-
-.box {
   display: flex;
   flex-flow: column;
-  height: 100%;
+}
+
+.light-mode-theme {
+  --color-lm-1: #dee2e6;
+  --color-lm-2: #406f95;
+  --color-lm-3: #d9e0e8;
+  --color-lm-4: #d1d6da;
+  --color-lm-5: #212529;
+  --color-lm-6: #355c7b;
+  --color-lm-7: #f5f9fc;
+  /* --- */
+  --navbar-bg: white;
+  --dropdown-menu-bg: white;
+  --dropdown-menu-border: 1px solid var(--color-lm-1);
+  --dropdown-hover: #f8f9fb;
+  --navbar-navlink-and-active-bg: white;
+  --navbar-a-tag: var(--color-lm-2);
+  --accts-section-bg: var(--color-lm-3);
+  --acct-block-bg: white;
+  --acct-block-hover: #f8fafa;
+  --acct-block-border: 1px solid var(--color-lm-4);
+  --acct-block-drop-shadow: drop-shadow(0 0 0.2rem #92a6bd);
+  --h4-color: var(--color-lm-5);
+  --h5-color: var(--color-lm-6);
+  --acct-amt-and-fico: black;
+  --footer-bg: var(--color-lm-7);
+  --footer-color: black;
+  --footer-and-fico-a-tag: var(--color-lm-2);
+}
+.dark-mode-theme {
+  --color-dm-1: #2c2c2c;
+  --color-dm-2: #121212;
+  --color-dm-3: #dedede;
+  --color-dm-4: #929292;
+  --color-dm-5: #6797be;
+  /* --- */
+  --navbar-bg: var(--color-dm-1);
+  --dropdown-menu-bg: var(--color-dm-1);
+  --dropdown-menu-border: 1px solid white;
+  --dropdown-hover: #565656;
+  --navbar-navlink-and-active-bg: var(--color-dm-1);
+  --navbar-a-tag: white;
+  --accts-section-bg: var(--color-dm-2);
+  --acct-block-bg: var(--color-dm-1);
+  --acct-block-hover: var(--color-dm-1);
+  --acct-block-border: 1px solid black;
+  --acct-block-drop-shadow: none;
+  --h4-color: var(--color-dm-3);
+  --h5-color: var(--color-dm-3);
+  --acct-amt-and-fico: var(--color-dm-4);
+  --footer-bg: var(--color-dm-1);
+  --footer-color: white;
+  --footer-and-fico-a-tag: var(--color-dm-5);
+}
+
+#navbar,
+#navbar .nav-link,
+#accts-section,
+.acct-block,
+footer {
+  transition: 0.1s;
 }
 
 /* --------------- HEADER SECTION ---------------*/
@@ -37,18 +96,13 @@ header .nav-link:hover {
 }
 
 /* --------------- NAVBAR ---------------*/
-#navbar,
-#navbar .nav-link {
-  transition: 0.1s;
+#navbar {
+  background-color: var(--navbar-bg);
 }
-
 /* horizontal scroll */
 #navbar .navbar-scroll {
   overflow: auto;
   white-space: nowrap;
-  /* the margin centers hor-scroll elements & prevents 
-  an element's top border from not showing on hover while 
-  a dropdown link is active*/
   margin: 1px auto 0;
 }
 
@@ -57,25 +111,46 @@ header .nav-link:hover {
   margin: auto 0;
 }
 
-/* toggled with JS */
-.dropdown-item-bg-override:hover {
-  background: #565656 !important;
+.dropdown-menu {
+  border: var(--dropdown-menu-border);
 }
 
+#navbar .nav-item * {
+  background-color: var(--navbar-navlink-and-active-bg);
+}
+
+#navbar a {
+  color: var(--navbar-a-tag);
+}
+
+.dropdown-item:hover {
+  background-color: var(--dropdown-hover) !important;
+}
+
+.unread-message {
+  position: relative;
+  animation: fadeIn 1s infinite alternate;
+}
 @keyframes fadeIn {
   from {
     opacity: 50%;
   }
 }
-
-.unread-message {
-  animation: fadeIn 1s infinite alternate;
+.unread-message span {
+  font-size: 10px;
+  line-height: 10px;
+  position: absolute;
+  top: 9px;
+  right: 7px;
+  padding: 0 6px;
+  border-radius: 25%;
+  background-color: red !important;
+  color: white;
 }
 
 /* --------------- BANK ACCOUNTS SECTION ---------------*/
 #accts-section {
-  transition: 0.1s;
-  background: #d9e0e8;
+  background: var(--accts-section-bg);
   flex: 1 1 auto;
 }
 
@@ -89,12 +164,12 @@ header .nav-link:hover {
 
 /* account h5 stying */
 h5 {
-  color: #355c7b;
+  color: var(--h5-color);
   font-weight: 400;
 }
 
 h4 {
-  color: #212529;
+  color: var(--h4-color);
   margin: 0.6rem 0.8rem 0.2rem;
 }
 
@@ -118,6 +193,11 @@ h4 {
   font-weight: 600;
 }
 
+.acct-amt,
+.fico {
+  color: var(--acct-amt-and-fico);
+}
+
 /* stylized superscript for acct cents*/
 .sup {
   font-size: medium;
@@ -125,33 +205,30 @@ h4 {
 }
 
 .acct-block {
-  transition: 0.1s;
   position: relative;
   height: 7rem;
   width: auto;
   margin: 5px auto;
-  border: 1px solid #d1d6da;
+
+  border-top: var(--acct-block-border);
+  border-right: var(--acct-block-border);
+  border-bottom: var(--acct-block-border);
   border-left: 10px solid;
   border-radius: 10px;
-  background: #ffffff;
+  background-color: var(--acct-block-bg);
 }
 
 .acct-block:hover {
-  transition: 0.1s;
   cursor: pointer;
   border-left: 7px solid currentColor;
-  background-color: #f8fafa;
-}
-
-/* acct-block drop shadow theme toggle */
-.acct-block-theme-toggle:hover {
-  filter: drop-shadow(0 0 0.2rem #92a6bd);
+  background-color: var(--acct-block-hover);
+  filter: var(--acct-block-drop-shadow);
 }
 
 /* --------------- FOOTER SECTION ---------------*/
 footer {
-  transition: 0.1s;
-  background: #f5f9fc;
+  background: var(--footer-bg);
+  color: var(--footer-color);
   text-align: center;
   flex: 0 1 auto;
 }
@@ -169,8 +246,9 @@ footer .container {
   margin: 5px 2rem;
 }
 
-a {
-  color: #406f95;
+footer a,
+.fico-score {
+  color: var(--footer-and-fico-a-tag);
 }
 a:hover {
   color: currentColor;
