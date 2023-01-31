@@ -1,6 +1,6 @@
 # SECU-Bank-Account-Redesign
 
-A redesign of the current (but outdated) SECU bank account desktop webpage UI to look like a combination of the [mobile app](https://apps.apple.com/us/app/secu/id1435916976) and [home desktop website](https://www.ncsecu.org/) without copied code.
+A redesign of the current (but outdated) SECU bank account desktop webpage UI to look like a combination of the [mobile app](https://apps.apple.com/us/app/secu/id1435916976) and [home desktop website](https://www.ncsecu.org/).
 
 - Removes unnecessary information and reorganizes redundant information.
 - Would remove the need for SECU's [separate desktop and mobile sign-in options](https://www.ncsecu.org/Home/MobileSignIn.html) via a single user-friendly UI consistent across any viewport.
